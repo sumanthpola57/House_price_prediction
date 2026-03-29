@@ -61,7 +61,7 @@ if submit:
 
     # Call FastAPI backend
     try:
-        response = requests.post("http://127.0.0.1:8000/predict", json=data)
+        response = requests.post("https://house-price-prediction-1-ck7o.onrender.com/predict", json=data)
         result = response.json()
         st.success(f"💰 Predicted House Price: ${result['prediction']:.2f}")
     except Exception as e:
