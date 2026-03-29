@@ -67,7 +67,7 @@ if submit:
             response = requests.post(
                 "https://house-price-prediction-1-ck7o.onrender.com/predict",
                 json=data,
-                timeout=60   # ← wait up to 60s for cold start
+                timeout=120   # ← wait up to 60s for cold start
             )
             result = response.json()
             st.success(f"💰 Predicted House Price: **${result['prediction']:,.2f}**")
